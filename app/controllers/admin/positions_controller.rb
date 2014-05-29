@@ -43,7 +43,7 @@ class Admin::PositionsController < ApplicationController
   def destroy
     Position.find(params[:id]).destroy
     flash[:success] = "Position deleted."
-    redirect_to root_url
+    redirect_to admin_positions_url
   end
   
   private

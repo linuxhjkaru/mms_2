@@ -15,10 +15,9 @@ Mms2::Application.routes.draw do
     root :to =>  'static_pages#home'
     resources :assign_user
   end
-  resources :skills
-  resources :projects
-  resources :users, only: [:index, :show, :edit, :create]
-  resources :teams
+  
+  resources :users, only: [:index, :show]
+  resources :teams, only: [:index, :show]
   resources :sessions, only: [:new, :create, :destroy]
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'

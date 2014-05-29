@@ -43,7 +43,7 @@ class Admin::TeamsController < ApplicationController
   def destroy
     Team.find(params[:id]).destroy
     flash[:success] = "Team deleted."
-    redirect_to root_url
+    redirect_to admin_teams_url
   end
 
   private
